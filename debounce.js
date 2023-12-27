@@ -1,9 +1,12 @@
 const debounce = (fn, time) => {
-    let timer = null;
-    return (...args) => {
-        clearInterval(timer)
-        timer = setTimeout(() => fn(...args), time)
+  let timer = null;
+  return (...args) => {
+    if (timer) {
+      clearTimeout(timer);
     }
- }
 
- module.exports = debounce
+    timer = setTimeout(() => fn(...args), time);
+  };
+};
+
+module.exports = debounce;
