@@ -12,24 +12,24 @@ function minSubArrayLen(target, nums) {
     currentSum += nums[right];
 
     while (currentSum >= target) {
-      // Обновляем минимальную длину подмассива
+      // Update the minimum length of the subarray
       minLength = Math.min(minLength, right - left + 1);
 
-      // Вычитаем nums[left] из текущей суммы подмассива
+      // Deduct nums[left] from the current sum of the subarray
       currentSum -= nums[left];
 
-      // Уменьшаем left (перемещаем окно влево)
+      // Decrease left (move the window to the left)
       left++;
     }
-    // Увеличиваем right (расширяем окно вправо)
+    // Enlarge right (widen the window to the right)
     right++;
   }
 
   return minLength === Infinity ? 0 : minLength;
 }
 
-// Пример использования
+// Example of use
 const target = 7;
 const nums = [2, 3, 1, 2, 4, 3];
 const result = minSubArrayLen(target, nums);
-console.log(result); // Выведет 2
+console.log(result); // log 2

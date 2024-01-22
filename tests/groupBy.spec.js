@@ -1,4 +1,4 @@
-const groupBy = require('../groupeBy/groupBy');
+const groupBy = require('../Object/groupeBy');
 
 describe('groupBy function', () => {
   afterAll(() => {

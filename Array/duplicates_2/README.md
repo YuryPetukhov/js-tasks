@@ -1,4 +1,5 @@
 Approach
+
 The solution uses a sliding window approach to keep track of the elements within a distance of k from the current element. The sliding window is implemented using a Set data structure, which allows us to efficiently check if an element is already in the window.
 
 For each element in the input array nums, we first check if the element is already in the Set. If it is, then we have found a duplicate within k distance and we can return true. This is because the Set only contains elements within a distance of k from the current element, so if the current element is already in the Set, it must be a duplicate within k distance.

@@ -1,5 +1,6 @@
 function containsNearbyDuplicate(nums, k) {
   const window = new Set();
+
   for (let i = 0; i < nums.length; i++) {
     const element = nums[i];
 

@@ -1,4 +1,4 @@
-const duplicate = require('../containsDuplicate');
+const duplicate = require('../Array/containsDuplicate');
 
 describe('duplicate function', () => {
   test('duplicate', () => {

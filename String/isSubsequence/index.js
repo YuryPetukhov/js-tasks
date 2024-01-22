@@ -25,4 +25,4 @@ var isSubsequence = function (s, t) {
   return i === s.length;
 };
 
-console.log(isSubsequence('acb', 'ahbgdc'));
+console.log(isSubsequence('acb', 'ahbgdc')); // false
